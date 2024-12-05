@@ -14,4 +14,9 @@ jobs:
     runs-on:
       ubuntu-latest
     steps:
-      - run: echo "Goodbuy!"
+      - name: Successful step
+        run: |
+          echo "I will succeed"
+          exit 0
+      - name: Say goodbye
+        run: echo "Goodbye!"
