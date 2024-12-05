@@ -1,0 +1,17 @@
+name: 01 - Building Blocks
+
+on:
+  push
+
+jobs:
+  echo-hello:
+    runs-on:
+      ubuntu-latst
+    steps:
+      - run: echo "Hello, World!"
+
+  echo-goodbye:
+    runs-on:
+      ubuntu-latst
+    steps:
+      - run: echo "Goodbuy!"
