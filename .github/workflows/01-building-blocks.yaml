@@ -6,12 +6,12 @@ on:
 jobs:
   echo-hello:
     runs-on:
-      ubuntu-latst
+      ubuntu-latest
     steps:
       - run: echo "Hello, World!"
 
   echo-goodbye:
     runs-on:
-      ubuntu-latst
+      ubuntu-latest
     steps:
       - run: echo "Goodbuy!"
