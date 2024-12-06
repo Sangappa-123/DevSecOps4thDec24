@@ -1,0 +1,13 @@
+name: Branch Pattern Push
+
+on:
+  push:
+    branches:
+      - 'dev'
+
+jobs:
+  branch-pattern-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Branch Name
+        run: echo "This workflow was triggered by a push to branch ${{ github.ref_name }}"
