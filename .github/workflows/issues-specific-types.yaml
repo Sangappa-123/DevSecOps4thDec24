@@ -1,0 +1,19 @@
+name: Issues with Specific Types
+
+on:
+  issues:
+    types:
+      - opened    # Trigger when a new issue is created
+      - reopened  # Trigger when a previously closed issue is reopened
+      - labeled   # Trigger when a label is added to an issue
+
+jobs:
+  handle-specific-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Event Details
+        run: |
+          echo "Triggered by the issues event."
+          echo "Action: ${{ github.event.action }}"
+          echo "Issue Number: ${{ github.event.issue.number }}"
+          echo "Issue Title: ${{ github.event.issue.title }}"
