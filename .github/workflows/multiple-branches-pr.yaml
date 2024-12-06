@@ -1,0 +1,14 @@
+name: Multiple Branches Pull Request
+
+on:
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  pr-branches-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Target Branch
+        run: echo "This pull request targets the branch ${{ github.base_ref }}"
