@@ -1,0 +1,17 @@
+name: Specific Event Types
+
+on:
+  issues:
+    types:
+      - opened    # Trigger only when a new issue is opened
+      - closed    # Trigger when an issue is closed
+  pull_request:
+    types:
+      - labeled   # Trigger when a label is added to a pull request
+
+jobs:
+  specific-event-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Event Type
+        run: echo "This workflow was triggered by the ${{ github.event_name }} event of type ${{ github.event.action }}"
